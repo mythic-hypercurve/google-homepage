@@ -6,23 +6,38 @@ a {
     text-decoration:none;
 }
 #nav_bar{
+    display: flex;
     padding:20px;
     height:30px;
+    align-items:center;
 }
 #nav_bar li{
     list-style-type:none;
+    flex-grow:0;
 }
+#nav_bar li:nth-child(2){
+    flex-grow:1;
+}
+
 #nav_bar a{
     width: 60px;
     color:rgba(0,0,0,.75);
+    font-size:13px;
+    padding:5px;
+    
 }
 #nav_bar button{
+    display:inline-block;
     color:white;
-    font-size:14px;
+    font-size:13px;
     font-weight:bold;
     background-color:rgb(60, 122, 228);
-    border-radius: 5px;
+    border:none;
+    border-radius: 2px;
     text-align:center;
+    height:30px;
+    width:70px;
+    
 }
 #logo{
     display:block;
@@ -72,20 +87,36 @@ a {
 li{
     display:inline;
 }
-div.footer{
-    width:auto;
-    color:rgba(0,0,0,.54);
-    border-top:1px solid #dadce0;
-    padding:10px 0 10px 0; 
-}
+
 footer{
     background:#f2f2f2;
     position:fixed;
     bottom:0;
     width:100%;
-    text-align:center;
-    
 }
+div.footer{
+    width:auto;
+    color:rgba(0,0,0,.54);
+    border-top:1px solid #dadce0;
+    padding:10px 0 10px 0; 
+    display:flex;
+}
+footer ul{
+    flex-grow:1;
+}
+#footer_link_cluster_right{
+    text-align: right;
+}
+footer li{
+    padding-left: 20px;
+}
+footer li:last-child{
+    padding-right: 20px;
+}    
 footer a {
     color:rgba(0,0,0,.54);
+}
+footer p{
+    padding-left: 20px;
+    width:100px;
 }
